@@ -1,0 +1,16 @@
+.contact {
+
+    &__info, 
+    &__form {
+        padding: 0 50px 50px 50px;
+
+        @media (min-width: $screen-md) {
+			padding: 100px;
+		}
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+}

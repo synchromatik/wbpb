@@ -6,13 +6,15 @@ const JSLoader = {
   use: {
     loader: 'babel-loader',
     options: {
-      presets: ['@babel/preset-env']
+      presets: ['@babel/preset-env', '@babel/react'],
+      plugins: ['@babel/plugin-proposal-class-properties'],
     },
   },
 };
+
 const SCSSLoader = {
   test: /\.scss$/,
-  use: ['style-loader', 'css-loader', 'sass-loader']
+  use: ['style-loader', 'css-loader', 'sass-loader'],
 };
 
 const ESLintLoader = {
@@ -31,8 +33,5 @@ const ESLintLoader = {
 };
 
 module.exports = {
-  JSLoader: JSLoader,
-  ESLintLoader: ESLintLoader,
-  SCSSLoader: SCSSLoader
+  JSLoader, ESLintLoader, SCSSLoader,
 };
-

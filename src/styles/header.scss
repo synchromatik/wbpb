@@ -1,0 +1,33 @@
+header {
+    position: sticky;
+    top: 0;
+    z-index: 998;
+    
+    .nav {
+        background: white;
+        height: 40px;
+        display: flex;
+        align-items:center;
+        justify-content:flex-end;
+        padding: 25px;
+        &--scrolling {
+            @include box-shadow(0px, 0px, 2px, rgba(87,87,87,0.41));
+        }
+        &__text {
+            padding-right: 10px;
+        }
+        &__switcher {
+            width: 30px;
+            height: 30px;
+            background-image: url(../images/lang-switcher.png);
+            background-size: cover;
+            
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .sr-active {
+            background-position-x: 30px;
+        }
+    }
+}

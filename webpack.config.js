@@ -3,7 +3,7 @@ const loaders = require('./loaders');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 module.exports = {
-    entry: ["./src/App.js"],
+    entry: ["./src/index.js"],
     module: {
         rules: [
             loaders.JSLoader,

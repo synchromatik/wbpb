@@ -1,0 +1,28 @@
+{
+    "contactPage": {
+        "header": "Kontaktirajte nas",
+        "subheader": "Iskoristite formu na desnoj strani da stupite u kontakt. Ako ste u žurbi ili ste blizu nas i hocete da svratite, pozovite nas preko telefonskog broja koji je ispisan ispod.",
+        "info": "Info",
+        "studioName": "Pickled Brain Tattoo Studio ",
+        "phone": "Telefon",
+        "email": "Email",
+        "adress": "Adresa",
+        "hours": "Radno vreme",
+        "weekdays": "Ponedeljak - Petak : 11am - 19pm",
+        "weekends": "Subota/Nedelja: po potrebi, zakažite."
+    },
+    "contactForm": {
+        "name": "Ime",
+        "email": "Email",
+        "messageLabel": "Poruka",
+        "message": "Opisite nam sta vam treba",
+        "sendButton": "Posalji",
+        "errorMessage": "Proverite formu i popunite sva polja pravilno",
+        "sendingMessage": "Saljemo poruku",
+        "sendingButton": "Saljem",
+        "sent": "Poslato"
+    },
+    "ui": {
+        "lang": "Srpski"
+    }
+}
