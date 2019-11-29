@@ -32,6 +32,13 @@ const ESLintLoader = {
   },
 };
 
+const IMAGELoader = {
+  test: /\.(png|svg|jpg|gif)$/,
+  use: [
+    'file-loader',
+  ],
+};
+
 module.exports = {
-  JSLoader, ESLintLoader, SCSSLoader,
+  JSLoader, ESLintLoader, SCSSLoader, IMAGELoader,
 };
