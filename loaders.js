@@ -32,13 +32,25 @@ const ESLintLoader = {
   },
 };
 
+const SVGLoader = {
+  test: /\.svg$/,
+  use: [
+    {
+      loader: '@svgr/webpack',
+      options: {
+        native: true,
+      },
+    },
+  ],
+};
+
 const IMAGELoader = {
-  test: /\.(png|svg|jpg|gif)$/,
+  test: /\.(png|jpg|gif)$/,
   use: [
     'file-loader',
   ],
 };
 
 module.exports = {
-  JSLoader, ESLintLoader, SCSSLoader, IMAGELoader,
+  JSLoader, ESLintLoader, SCSSLoader, SVGLoader, IMAGELoader,
 };

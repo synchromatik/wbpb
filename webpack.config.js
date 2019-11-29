@@ -10,6 +10,7 @@ module.exports = {
       loaders.JSLoader,
       loaders.ESLintLoader,
       loaders.SCSSLoader,
+      loaders.SVGLoader,
       loaders.IMAGELoader,
     ]
   },

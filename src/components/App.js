@@ -1,16 +1,16 @@
 import React, { Suspense } from 'react';
 import { StateProvider } from './state';
 import Gallery from './Gallery/Gallery';
-import ImageList from './Gallery/ImageList';
 import AppLoader from './Loader';
 import '../styles/main.scss';
+
 
 function App() {
   const initialState = {
     modal: {
       showModal: false,
     },
-    images: ImageList,
+    images: [],
   };
 
   const reducer = (state, action) => {
@@ -20,11 +20,15 @@ function App() {
           ...state,
           modal: action.newModal,
         };
+      case 'loadImages':
+        return {
+          ...state,
+          images: action.newImages,
+        };
       default:
         return state;
     }
   };
-
   return (
     <StateProvider initialState={initialState} reducer={reducer}>
       <Suspense fallback={<AppLoader />}>
