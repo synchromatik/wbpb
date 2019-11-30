@@ -10,6 +10,7 @@ function App() {
     modal: {
       showModal: false,
     },
+    imageIndex: 0,
     images: [],
   };
 
@@ -19,6 +20,12 @@ function App() {
         return {
           ...state,
           modal: action.newModal,
+          imageIndex: action.newImageIndex,
+        };
+      case 'updateActiveImage':
+        return {
+          ...state,
+          imageIndex: action.newImageIndex,
         };
       case 'loadImages':
         return {
