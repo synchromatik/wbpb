@@ -34,14 +34,7 @@ const ESLintLoader = {
 
 const SVGLoader = {
   test: /\.svg$/,
-  use: [
-    {
-      loader: '@svgr/webpack',
-      options: {
-        native: true,
-      },
-    },
-  ],
+  use: ['@svgr/webpack'],
 };
 
 const IMAGELoader = {

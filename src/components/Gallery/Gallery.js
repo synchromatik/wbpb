@@ -32,15 +32,18 @@ function Gallery() {
         {images.map((image, index) => (
           <SingleGalleryImage
             key={index}
-            id={index}
-            url={`${CLOUDURL}${'w_500,h_500,c_crop'}/${image.public_id}.${image.format}`}
-            fullUrl={`${CLOUDURL}${image.public_id}.${image.format}`}
+            desktopUrl={`${CLOUDURL}${'w_320,h_320,c_crop'}/${image.public_id}.${image.format}`}
             index={index}
+            descriptionEN={image.context ? image.context.custom.description : 'Default'}
+            descriptionSR={image.context ? image.context.custom.opis : 'opis'}
           />
         ))}
         {modal.showModal
           ? (
-            <Modal />
+            <Modal
+              descriptionEN={images.context ? images.context.custom.description : 'Default'}
+              descriptionSR={images.context ? images.context.custom.opis : 'opis'}
+            />
           ) : null}
       </div>
     </>

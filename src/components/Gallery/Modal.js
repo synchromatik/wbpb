@@ -3,7 +3,7 @@ import { useStateValue } from '../state';
 
 function Modal() {
   const [{ imageIndex, modal, images }, dispatch] = useStateValue();
-  const CLOUDURL = 'https://res.cloudinary.com/pickled-brain/image/upload/';
+  const CLOUDURL = 'https://res.cloudinary.com/pickled-brain/image/upload';
   function handleKeyPress(event) {
     if (event.key === 'Enter') {
       console.log('keypressed enter');
@@ -63,14 +63,10 @@ function Modal() {
           >
             Next
           </button>
-          <p className="white">
-            image index:
-            {imageIndex}
-            <img
-              src={`${CLOUDURL}${images[imageIndex].public_id}.${images[imageIndex].format}`}
-              alt="alt"
-            />
-          </p>
+          <img
+            src={`${CLOUDURL}/if_iw_gt_1000,w_800,c_fit/${images[imageIndex].public_id}.${images[imageIndex].format}`}
+            alt={images[imageIndex].context ? images[imageIndex].context.custom.description : 'Default'}
+          />
         </div>
       </div>
     </>

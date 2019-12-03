@@ -1,9 +1,10 @@
 import React, { Suspense } from 'react';
 import { StateProvider } from './state';
+import Header from './Header/Header';
 import Gallery from './Gallery/Gallery';
+import Contact from './Contact/Contact';
 import AppLoader from './Loader';
 import '../styles/main.scss';
-
 
 function App() {
   const initialState = {
@@ -12,6 +13,7 @@ function App() {
     },
     imageIndex: 0,
     images: [],
+    lang: 'en',
   };
 
   const reducer = (state, action) => {
@@ -32,6 +34,11 @@ function App() {
           ...state,
           images: action.newImages,
         };
+      case 'updateLang':
+        return {
+          ...state,
+          lang: action.newLang,
+        };
       default:
         return state;
     }
@@ -40,8 +47,9 @@ function App() {
     <StateProvider initialState={initialState} reducer={reducer}>
       <Suspense fallback={<AppLoader />}>
         <div className="wrapper">
-          <h1>App root</h1>
+          <Header />
           <Gallery />
+          <Contact />
         </div>
       </Suspense>
     </StateProvider>

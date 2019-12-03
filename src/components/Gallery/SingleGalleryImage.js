@@ -1,26 +1,27 @@
 import React from 'react';
-import { useStateValue } from '../state';
+import { SimpleImg } from 'react-simple-img';
 
 function SingleGalleryImage(props) {
-  const { url, alt, index } = props;
-  const [, dispatch] = useStateValue();
+  const { desktopUrl, descriptionEN } = props;
   return (
     <div className="item">
-      <button
+      {/* <button
         type="button"
         onClick={() => dispatch({
           type: 'updateModal',
           newModal: { showModal: true },
           newImageIndex: index,
         })}
-      >
-        <img
-          src={url}
-          className="image"
-          alt={alt}
-          id={index}
-        />
-      </button>
+        aria-label="SampleTattooWorks"
+      > */}
+      <SimpleImg
+        height={320}
+        width={320}
+        applyAspectRatio
+        src={desktopUrl}
+        alt={descriptionEN}
+      />
+      {/* </button> */}
     </div>
   );
 }

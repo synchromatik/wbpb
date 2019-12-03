@@ -1,4 +1,14 @@
 .galery {
+  button{
+    background: none;
+    margin:0;
+    padding:0;
+    display: block;
+    border-bottom: 0;
+    &:hover {
+      border: 0;
+    }
+  }
     background: black;
     .brand {
         display: flex;
@@ -15,12 +25,12 @@
                 margin-bottom: auto;
             }
         }
-        #Layer_1 {
+        #logo_svg__Layer_1 {
             display: block;
             margin: auto;
             width: 220px;
             @media (min-width: $screen-xs) {
-                width: 320px;
+                width: 220px;
             }
             @media (min-width: $screen-sm) {
                 width: 180px;
@@ -30,9 +40,7 @@
             }
         }
     }
-    .image {
-        max-width: 100%;
-        display: block;
+    img {
         filter: grayscale(100%);
         &:hover {
             cursor: pointer;
