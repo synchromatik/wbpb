@@ -1,50 +1,40 @@
 .galery {
-  button{
-    background: none;
-    margin:0;
-    padding:0;
-    display: block;
-    border-bottom: 0;
-    &:hover {
-      border: 0;
-    }
+  background: black;
+  .brand {
+      display: flex;
+      align-items:center;
+      .logo {
+          flex-grow:2;
+          margin-top: -35px;
+          z-index: 998;
+          margin-bottom: 20px;
+          pointer-events: none;
+          @media (min-width: $screen-xs) {
+              margin-top: auto;
+              z-index: 0;
+              margin-bottom: auto;
+          }
+      }
+      #logo_svg__Layer_1 {
+          display: block;
+          margin: auto;
+          width: 220px;
+          @media (min-width: $screen-xs) {
+              width: 220px;
+          }
+          @media (min-width: $screen-sm) {
+              width: 180px;
+          }
+          @media (min-width: $screen-md) {
+              width: 420px;
+          }
+      }
   }
-    background: black;
-    .brand {
-        display: flex;
-        align-items:center;
-        .logo {
-            flex-grow:2;
-            margin-top: -35px;
-            z-index: 998;
-            margin-bottom: 20px;
-            pointer-events: none;
-            @media (min-width: $screen-xs) {
-                margin-top: auto;
-                z-index: 0;
-                margin-bottom: auto;
-            }
-        }
-        #logo_svg__Layer_1 {
-            display: block;
-            margin: auto;
-            width: 220px;
-            @media (min-width: $screen-xs) {
-                width: 220px;
-            }
-            @media (min-width: $screen-sm) {
-                width: 180px;
-            }
-            @media (min-width: $screen-md) {
-                width: 420px;
-            }
-        }
-    }
-    img {
-        filter: grayscale(100%);
-        &:hover {
-            cursor: pointer;
-             filter: grayscale(0%);
-        }
-    }
+  img {
+      filter: grayscale(100%);
+      &:hover {
+          cursor: pointer;
+            filter: grayscale(0%);
+      }
+  }
 }
