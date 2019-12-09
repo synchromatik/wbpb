@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import axios from 'axios';
 import { useStateValue } from '../state';
 import SingleGalleryImage from './SingleGalleryImage';
 import Modal from './Modal';
@@ -11,20 +10,18 @@ function Gallery() {
   }, dispatch] = useStateValue();
   const CLAPI = 'http://res.cloudinary.com/pickled-brain/image/list/live.json';
   const CLOUDURL = 'https://res.cloudinary.com/pickled-brain/image/upload/';
+
   useEffect(() => {
-    axios
-      .get((CLAPI), { crossdomain: true })
-      .then((response) => {
-        dispatch({
-          type: 'loadImages',
-          newImages: response.data.resources,
-        });
-      })
-      .catch((err) => {
-        throw (err);
+    fetch(CLAPI)
+      .then((response) => response.json())
+      .then((data) => dispatch({
+        type: 'loadImages',
+        newImages: data.resources,
+      }))
+      .catch((error) => {
+        throw (error);
       });
   }, []);
-
   return (
     <>
       <div className="galery">

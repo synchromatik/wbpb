@@ -20,6 +20,7 @@ function SingleGalleryImage(props) {
         applyAspectRatio
         src={desktopUrl}
         alt={descriptionEN}
+        placeholder="https://samherbert.net/svg-loaders/svg-loaders/oval.svg"
       />
       {/* </button> */}
     </div>
