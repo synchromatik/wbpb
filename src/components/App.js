@@ -3,6 +3,7 @@ import { StateProvider } from './state';
 import Header from './Header/Header';
 import Gallery from './Gallery/Gallery';
 import Contact from './Contact/Contact';
+import Map from './Map/Map';
 import AppLoader from './Loader';
 import '../styles/main.scss';
 
@@ -50,6 +51,7 @@ function App() {
           <Header />
           <Gallery />
           <Contact />
+          <Map />
         </div>
       </Suspense>
     </StateProvider>

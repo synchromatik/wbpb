@@ -1,28 +1,25 @@
 import React from 'react';
 import { SimpleImg } from 'react-simple-img';
+import { useStateValue } from '../state';
 
 function SingleGalleryImage(props) {
-  const { desktopUrl, descriptionEN } = props;
+  const { desktopUrl, descriptionEN, index } = props;
+  const [, dispatch] = useStateValue();
   return (
     <div className="item">
-      {/* <button
-        type="button"
-        onClick={() => dispatch({
-          type: 'updateModal',
-          newModal: { showModal: true },
-          newImageIndex: index,
-        })}
-        aria-label="SampleTattooWorks"
-      > */}
       <SimpleImg
         height={320}
         width={320}
         applyAspectRatio
         src={desktopUrl}
         alt={descriptionEN}
-        placeholder="https://samherbert.net/svg-loaders/svg-loaders/oval.svg"
+        imgStyle={{ zIndex: '1' }}
+        onClick={() => dispatch({
+          type: 'updateModal',
+          newModal: { showModal: true },
+          newImageIndex: index,
+        })}
       />
-      {/* </button> */}
     </div>
   );
 }

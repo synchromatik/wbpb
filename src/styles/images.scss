@@ -30,11 +30,14 @@
           }
       }
   }
-  img {
+  .item {
+    img {
       filter: grayscale(100%);
       &:hover {
-          cursor: pointer;
-            filter: grayscale(0%);
+        cursor: pointer;
+        filter: grayscale(0);
       }
+    }
   }
+
 }

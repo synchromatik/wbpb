@@ -13,7 +13,7 @@ const JSLoader = {
 };
 
 const SCSSLoader = {
-  test: /\.scss$/,
+  test: /\.(scss|css)$/,
   use: ['style-loader', 'css-loader', 'sass-loader'],
 };
 
