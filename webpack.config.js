@@ -1,10 +1,10 @@
 const path = require('path');
-const loaders = require('./loaders');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
+const loaders = require('./loaders');
 
 module.exports = {
-  entry: ["./src/index.js"],
+  entry: ['./src/index.js'],
   module: {
     rules: [
       loaders.JSLoader,
@@ -12,11 +12,11 @@ module.exports = {
       loaders.SCSSLoader,
       loaders.SVGLoader,
       loaders.IMAGELoader,
-    ]
+    ],
   },
   output: {
-    path: path.join(__dirname, "public"),
-    filename: "[name].bundle.js"
+    path: path.join(__dirname, 'public'),
+    filename: '[name].bundle.js',
   },
   devtool: 'cheap-module-eav1-source-map',
   devServer: {
@@ -25,8 +25,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: './src/index.html',
     }),
-    new FriendlyErrorsWebpackPlugin()
+    new FriendlyErrorsWebpackPlugin(),
   ],
 };
