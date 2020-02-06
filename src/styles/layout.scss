@@ -22,7 +22,7 @@ body {
 	.galery {
 		grid-area: galery;
 		display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: 50% 50%;
     @media (min-width: $screen-xs) {
 			grid-template-columns: 50% 50%;
 		}
@@ -31,7 +31,7 @@ body {
 		}
 		.brand {
 			grid-column-start: 1;
-			grid-column-end: 2;
+			grid-column-end: 3;
 			grid-row-start: 1;
 			grid-row-end: 2;
 			@media (min-width: $screen-sm) {

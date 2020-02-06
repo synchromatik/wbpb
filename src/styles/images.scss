@@ -18,15 +18,15 @@
       #logo_svg__Layer_1 {
           display: block;
           margin: auto;
-          width: 220px;
+          max-width: 220px;
           @media (min-width: $screen-xs) {
-              width: 220px;
+              max-width: 220px;
           }
           @media (min-width: $screen-sm) {
-              width: 180px;
+              max-width: 180px;
           }
           @media (min-width: $screen-md) {
-              width: 420px;
+              max-width: 420px;
           }
       }
   }
